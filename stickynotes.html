@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Notes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .note-container {
+            width: 300px;
+            padding: 10px;
+            background-color: yellow;
+            border: 1px solid #ccc;
+            position: relative;
+            margin: 20px;
+        }
+
+        .note-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .note-title {
+            font-weight: bold;
+        }
+
+        .note-content {
+            white-space: pre-wrap;
+        }
+
+        .delete-button {
+            cursor: pointer;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="note-container">
+        <div class="note-header">
+            <div class="note-title">Sticky Note 1</div>
+            <div class="delete-button" onclick="deleteNote(this)">X</div>
+        </div>
+        <div class="note-content">
+            This is a sample sticky note. You can edit the title and content.
+        </div>
+    </div>
+
+    <div class="note-container">
+        <div class="note-header">
+            <div class="note-title">Sticky Note 2</div>
+            <div class="delete-button" onclick="deleteNote(this)">X</div>
+        </div>
+        <div class="note-content">
+            Another sticky note here. Feel free to add more notes.
+        </div>
+    </div>
+
+    <script>
+        function deleteNote(deleteButton) {
+            const noteContainer = deleteButton.closest('.note-container');
+            noteContainer.remove();
+        }
+    </script>
+</body>
+</html>
+

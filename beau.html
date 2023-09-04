@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Analog Clock</title>
+    <!-- Include jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Include FlipClock.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.min.js"></script>
+    <!-- Include FlipClock.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.8/flipclock.css">
+</head>
+<body>
+    <div class="clock" style="margin: 50px;"></div>
+    <script>
+        // Initialize the FlipClock
+        $(document).ready(function() {
+            var clock = $('.clock').FlipClock({
+                clockFace: 'TwelveHourClock' // You can customize clockFace as needed
+            });
+        });
+    </script>
+</body>
+</html>
+
