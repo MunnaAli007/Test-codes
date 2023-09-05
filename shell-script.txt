@@ -1,1 +1,27 @@
+
+#!/bin/bash
+
+apt-get update
+apt-get install nginx -y
+
+echo "This is $(hostname)"  > /var/www/html/index.html
+
+
+#!/bin/bash
+
+sudo apt update
+git init
+git clone https://github.com/shreys7/django-todo.git
+cd django-todo/
+sudo apt install python3-pip
+sudo apt install python3-venv
+cd /path/to/your/project
+python3 -m venv venv
+source venv/bin/activate
+pip install django
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+
 failed to push
